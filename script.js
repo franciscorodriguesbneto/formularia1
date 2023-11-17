@@ -1,22 +1,65 @@
-const form = document.querySelectorAll("#form");
-const nomeinput = document.querySelectorAll("#nome");
-const senhainput = document.querySelectorAll("#senha");
-const emailinput = document.querySelectorAll("#email");
-/*
-form.addEventListener("submit" ,(evente) => {
-    evente.preventDefault();
-   
-    //validações
-    if (nomeinput.value === ""){
-        alert('O campo Nome é obrigatório');
-        return;
-        
-    }
-    console.log("funciona")
-})
-form.addEventListener();
+const form = document.querySelector("form");
+const nomeinput = document.querySelector("nome");
+const senhainput = document.querySelector("senha");
+const emailinput = document.querySelector("email");
 
-*/
+
+
+
+    //validações
+    const validarNome = () => {
+        if(nomeinput.value === ""){
+            alert('Por favor, preencha o campo Nome!');
+            return false;
+
+            }else{
+                return true;
+                };
+
+    }
+    const validarSenha = () => {
+        if (senhainput.value ===""){
+            alert ('Por favor, preencha a Senha!')
+            return false;
+            } else if (senhainput.length < 6){
+                alert ("A senha precisa ter no mínimo 6 caracteres!");
+                return false;
+                }else{
+                    return true;
+                    }
+    }
+    
+
+
+    form.addEventListener("submit" ,(evente) => {
+        evente.preventDefault();
+        
+      
+        console.log("passou")
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+
 let erro = false;
 
 function validarNome()
@@ -32,5 +75,5 @@ function validarSenha(){
     }
 }
 
-
+*/
 
